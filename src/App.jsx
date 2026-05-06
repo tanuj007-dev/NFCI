@@ -2,7 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import EventPage from './pages/EventPage';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 import Footer from './components/Footer';
+
+
 
 function App() {
   return (
@@ -12,6 +17,11 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/events" element={<EventPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blogdetails" element={<BlogDetailPage />} />
+          
+          
           </Routes>
         </div>
         <Footer />
