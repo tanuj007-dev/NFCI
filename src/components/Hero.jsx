@@ -17,11 +17,11 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center mt-10 justify-center gap-6 w-full">
-          <button className="bg-nfci-red hover:bg-nfci-red-hover text-white px-8 py-4 rounded-full font-libre text-[20px] font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-nfci-red hover:bg-nfci-red-hover text-white px-7 py-3.5 rounded-full font-libre text-base font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
             EXPLORE COURSES
           </button>
           
-          <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-libre text-[20px] font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white px-7 py-3.5 rounded-full font-libre text-base font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
             BROWSE LOCATIONS
           </button>
         </div>

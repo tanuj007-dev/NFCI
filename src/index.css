@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'NewYork';
+  src: url('./assets/NewYork.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --font-lora: 'Lora', serif;
   --font-libre: 'Libre Baskerville', serif;
-  --font-new-york: 'Playfair Display', serif;
+  --font-new-york: 'NewYork', serif;
   --color-nfci-red: #a12c20;
   --color-nfci-red-hover: #8a251b;
 }
@@ -20,7 +27,7 @@
   color: var(--text);
   background-color: var(--bg);
 
-  font-synthesis: none;
+  font-synthesis: weight style;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

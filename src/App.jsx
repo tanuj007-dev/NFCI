@@ -1,19 +1,23 @@
-import { useState } from 'react'
-
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="relative overflow-x-hidden">
-      <div className="absolute top-2 left-0 w-full z-50">
-        <Navbar />
+    <Router>
+      <div className="relative overflow-x-hidden min-h-screen flex flex-col">
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <main>
-        <Hero />
-      </main>
-    </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
