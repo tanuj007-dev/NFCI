@@ -80,10 +80,10 @@ const AboutTeam = () => {
         
         {/* Our Affiliations */}
         <div className="mb-24 lg:mb-32">
-          <h2 className="font-new-york text-4xl md:text-[32px] text-[#1a1a1a] text-center mb-16">
+          <h2 className="font-new-york text-4xl md:text-5xl text-[#1a1a1a] text-center mb-16">
             Our Affiliations
           </h2>
-          <div className="flex flex-wrap mt-10 justify-center items-center gap-8 md:gap-16 lg:gap-12">
+          <div className="flex flex-wrap mt-16 justify-center items-center gap-8 md:gap-16 lg:gap-12">
             {[aff1, aff2, aff3, aff4, aff5].map((aff, i) => (
               <div key={i} className="w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-500">
                 <img src={aff} alt="Affiliation" className="max-w-full h-auto object-contain" />
@@ -97,7 +97,7 @@ const AboutTeam = () => {
           <h2 className="font-new-york text-4xl md:text-5xl text-[#1a1a1a] text-center mb-16">
             Team of Experts
           </h2>
-          <div className="relative">
+          <div className="relative mt-20">
             <NavButton direction="left" onClick={() => teamSwiperRef.current?.slidePrev()} />
             <NavButton direction="right" onClick={() => teamSwiperRef.current?.slideNext()} />
             
@@ -106,8 +106,8 @@ const AboutTeam = () => {
               onBeforeInit={(swiper) => {
                 teamSwiperRef.current = swiper;
               }}
-              spaceBetween={15}
-              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerView={2}
               loop={true}
               autoplay={{ delay: 4000, disableOnInteraction: false }}
               breakpoints={{
@@ -121,7 +121,7 @@ const AboutTeam = () => {
                 <SwiperSlide key={i}>
                   <div className="flex flex-col items-center text-center">
                     <div className="w-full aspect-[3/4] mb-6 overflow-hidden">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover scale-[1.1]" />
                     </div>
                     <h3 className="font-lora text-nfci-red font-bold text-sm md:text-base mb-1">
                       {member.name}
@@ -141,7 +141,7 @@ const AboutTeam = () => {
           <h2 className="font-new-york text-4xl md:text-5xl text-[#1a1a1a] text-center mb-16">
             Our Trailblazers
           </h2>
-          <div className="relative">
+          <div className="relative mt-20">
             <NavButton direction="left" onClick={() => trailblazersSwiperRef.current?.slidePrev()} />
             <NavButton direction="right" onClick={() => trailblazersSwiperRef.current?.slideNext()} />
             
@@ -150,8 +150,8 @@ const AboutTeam = () => {
               onBeforeInit={(swiper) => {
                 trailblazersSwiperRef.current = swiper;
               }}
-              spaceBetween={15}
-              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerView={2}
               loop={true}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
               breakpoints={{
@@ -165,7 +165,7 @@ const AboutTeam = () => {
                 <SwiperSlide key={i}>
                   <div className="flex flex-col items-center text-center">
                     <div className="w-full aspect-[3/4] mb-6 overflow-hidden">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover scale-[1.1]" />
                     </div>
                     <h3 className="font-lora text-nfci-red font-bold text-sm md:text-base mb-1">
                       {member.name}

@@ -1,35 +1,24 @@
 import React from 'react';
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
 
 const NFCIHistory = () => {
   const cards = [
     {
       title: "Our Mission",
       desc: "Mentoring towards empowerment",
-      icon: (
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#a12c20" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          <path d="M12 7l1.5 3 3.5.5-2.5 2.5.5 3.5L12 15l-3 1.5.5-3.5-2.5-2.5 3.5-.5L12 7z" />
-        </svg>
-      )
+      image: img1
     },
     {
       title: "Our Vision",
       desc: "To enlighten the path of learner towards employability, sustainability and entrepreneurship by providing essential skillset.",
-      icon: (
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#a12c20" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
-          <circle cx="12" cy="12" r="3" />
-        </svg>
-      )
+      image: img2
     },
     {
       title: "Core Values",
       desc: "Respect, honesty, commitment growth.",
-      icon: (
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#a12c20" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-        </svg>
-      )
+      image: img3
     }
   ];
 
@@ -54,19 +43,19 @@ const NFCIHistory = () => {
         </div>
 
         {/* Cards Section */} 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((card, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-[20px] p-8 md:p-10 flex flex-col items-center text-center shadow-xl transform hover:translate-y-[-10px] transition-all duration-300 min-h-[320px] justify-center"
+              className="bg-white rounded-[20px] p-6 md:p-8 flex flex-col items-center text-center shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 min-h-[280px] justify-center"
             >
               <div className="mb-4">
-                {card.icon}
+                <img src={card.image} alt={card.title} className="w-16 h-16 object-contain" />
               </div>
-              <h3 className="font-new-york text-xl md:text-2xl text-[#1a1a1a] mb-2">
+              <h3 className="font-new-york text-lg md:text-xl text-[#1a1a1a] mb-2">
                 {card.title}
               </h3>
-              <p className="font-lora text-gray-500 text-base md:text-[16px] leading-relaxed">
+              <p className="font-lora text-gray-500 text-sm md:text-base leading-relaxed">
                 {card.desc}
               </p>
             </div>

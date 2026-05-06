@@ -12,6 +12,7 @@ import CoursesSlider from '../components/CoursesSlider';
 
 import WhyChooseAbout from '../components/WhyChooseAbout';
 import AboutTeam from '../components/AboutTeam';
+import TrainingPartners from '../components/TrainingPartners';
 
 const AboutPage = () => {
   return (
@@ -25,7 +26,7 @@ const AboutPage = () => {
          <CoursesSlider />  
         <WhyChooseAbout />
         <AboutTeam />
-       
+        <TrainingPartners />
       </main>
     </div>
   );
