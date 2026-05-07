@@ -1,6 +1,7 @@
 // File: RecentPostsSection.jsx
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const categories = [
   "All",
@@ -76,40 +77,42 @@ const posts = [
 const BlogCard = ({ post }) => {
   return (
     <article className="group flex flex-col gap-[18px] cursor-pointer transition-all duration-300 hover:-translate-y-2">
-      {/* Image */}
-      <div className="overflow-hidden rounded-[10px]">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-[229px] object-cover block transition-transform duration-500 group-hover:scale-[1.03]"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-col gap-3">
-        {/* Meta */}
-        <div className="flex items-center gap-2">
-          <span className="font-lora text-[12px] leading-[17.1px] text-[#9B251E]">
-            {post.date}
-          </span>
-
-          <span className="w-[3px] h-[3px] rounded-full bg-[#999999]" />
-
-          <span className="font-lora text-[12px] leading-[17.1px] text-[#666666]">
-            {post.readTime}
-          </span>
+      <Link to="/blogdetails" className="contents">
+        {/* Image */}
+        <div className="overflow-hidden rounded-[10px]">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-[229px] object-cover block transition-transform duration-500 group-hover:scale-[1.03]"
+          />
         </div>
 
-        {/* Title */}
-        <h3 className="font-[Cormorant_Garamond] text-[24px] leading-[115%] font-semibold text-[#1F1A17] line-clamp-2">
-          {post.title}
-        </h3>
+        {/* Content */}
+        <div className="flex flex-col gap-3">
+          {/* Meta */}
+          <div className="flex items-center gap-2">
+            <span className="font-lora text-[12px] leading-[17.1px] text-[#9B251E]">
+              {post.date}
+            </span>
 
-        {/* Description */}
-        <p className="font-lora text-[16px] leading-6 font-normal text-[#444444] line-clamp-3">
-          {post.description}
-        </p>
-      </div>
+            <span className="w-[3px] h-[3px] rounded-full bg-[#999999]" />
+
+            <span className="font-lora text-[12px] leading-[17.1px] text-[#666666]">
+              {post.readTime}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 className="font-[Cormorant_Garamond] text-[24px] leading-[115%] font-semibold text-[#1F1A17] line-clamp-2">
+            {post.title}
+          </h3>
+
+          {/* Description */}
+          <p className="font-lora text-[16px] leading-6 font-normal text-[#444444] line-clamp-3">
+            {post.description}
+          </p>
+        </div>
+      </Link>
     </article>
   );
 };

@@ -6,16 +6,16 @@ import BlogCardSection from "../components/BlogCardSection";
 import RecentPostsSection from "../components/RecentPostsSection";
 import NFCIHistory from "../components/NFCIHistory";
 import Contact from "../components/Contact";
-import Navbar from "../components/Navbar";
+import AboutNavbar from "../components/AboutNavbar";
 const BlogPage = () => {
   return (
     <>
-        <Navbar />
+        <AboutNavbar />
         <BlogPageHero />
         <BlogCardSection />
         <RecentPostsSection />
         <NFCIHistory />
-        <Contact />
+        <Contact bgColor="bg-[#FFF7ED]" />
 
 
 

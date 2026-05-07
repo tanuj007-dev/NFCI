@@ -4,11 +4,11 @@ import 'react-phone-input-2/lib/style.css';
 
 const PhoneInput = PhoneInputPkg.default || PhoneInputPkg;
 
-const Contact = () => {
+const Contact = ({ bgColor = "bg-white" }) => {
   const [phone, setPhone] = useState('');
 
   return (
-    <section className="bg-white py-20 lg:py-32 overflow-hidden">
+    <section className={`${bgColor} py-20 lg:py-32 overflow-hidden`}>
       <div className="container mx-auto px-4 md:px-10 lg:px-[100px]">
 
         {/* Upper Section: Form and Info */}

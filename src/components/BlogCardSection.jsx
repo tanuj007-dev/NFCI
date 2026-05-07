@@ -1,7 +1,8 @@
 // BlogCardSection.jsx
 
 import React from "react";
-import blogImage from "../assets/blog-card-image.png"; // replace with your actual image path
+import blogImage from "../assets/blog-card-image.png"; 
+import { Link } from "react-router-dom";
 
 const BlogCardSection = () => {
   return (
@@ -82,7 +83,7 @@ const BlogCardSection = () => {
             many of you think that there...
           </p>
 
-          {/* Button */}
+          <Link to="/blogdetails">
           <button
             className="
               w-[246.41px]
@@ -102,6 +103,7 @@ const BlogCardSection = () => {
           >
             Read More
           </button>
+          </Link>
         </div>
       </div>
     </section>
