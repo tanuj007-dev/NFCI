@@ -29,14 +29,18 @@ export default function FeaturedMusicFestivalSection() {
   return (
     <section className="w-full bg-[#F5EFE8] py-[100px] pb-[80px]">
       <div className="mx-auto flex w-full max-w-[1351px] flex-col gap-12 px-4 xl:px-0">
+        
         {/* Top Content */}
         <div className="flex flex-col items-start gap-7">
+
           {/* Category */}
           <div className="flex flex-col items-start gap-[6px]">
             <span className="h-[1px] w-[64px] bg-[#9B251E]" />
+
             <p className="font-lora text-[22px] font-medium leading-[28.42px] text-[#9B251E]">
               Marketing
             </p>
+
             <span className="h-[1px] w-[64px] bg-[#9B251E]" />
           </div>
 
@@ -101,6 +105,7 @@ export default function FeaturedMusicFestivalSection() {
               </div>
             ))}
           </div>
+
         </div>
 
         {/* Feature Image */}
@@ -109,15 +114,16 @@ export default function FeaturedMusicFestivalSection() {
             src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000&auto=format&fit=crop"
             alt="Rhythm Blast Music Festival"
             className="
-              h-[320px] w-full object-cover
-              md:h-[450px]
-              xl:h-[595px]
+              h-[260px] w-full object-cover
+              md:h-[380px]
+              xl:h-[500px]
             "
           />
         </div>
 
         {/* Bottom Divider */}
         <div className="mt-8 w-full border-t border-[#717276]" />
+
       </div>
     </section>
   );

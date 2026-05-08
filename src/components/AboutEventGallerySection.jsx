@@ -49,7 +49,7 @@ export default function AboutEventGallerySection() {
           initial={{ opacity: 0.85, scale: 1.02 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.45 }}
-          className="w-full h-[300px] md:h-[460px] lg:h-[595px] rounded-[10px] overflow-hidden"
+          className="w-full h-[240px] md:h-[380px] lg:h-[500px] rounded-[10px] overflow-hidden"
         >
           <img
             src={galleryImages[activeImage]}
@@ -70,7 +70,7 @@ export default function AboutEventGallerySection() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.25 }}
                 onClick={() => setActiveImage(actualIndex)}
-                className={`relative min-w-[240px] md:min-w-0 w-[240px] md:w-full lg:w-[327px] h-[220px] md:h-[250px] lg:h-[283px] rounded-[10px] overflow-hidden border transition-all duration-300 ${
+                className={`relative min-w-[200px] md:min-w-0 w-[200px] md:w-full lg:w-[280px] h-[170px] md:h-[200px] lg:h-[220px] rounded-[10px] overflow-hidden border transition-all duration-300 ${
                   isActive
                     ? "border-[2px] border-[#9B251E]"
                     : "border-transparent"
