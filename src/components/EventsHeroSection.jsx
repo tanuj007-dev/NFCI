@@ -6,28 +6,28 @@ import eventBanner from "../assets/event-banner.jpg";
 
 export default function EventsHeroSection() {
   return (
-    <section className="relative w-full overflow-hidden lg:h-[700px]">
+    <section className="relative w-full overflow-hidden min-h-[600px] lg:h-[700px]">
       {/* Background Image */}
       <img
         src={eventBanner}
         alt="Luxury event banner"
-        className="absolute inset-0 h-[730px] w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/55 z-[1]" />
 
       {/* Main Content */}
-      <div className="relative z-[2] flex min-h-[700px] w-full items-end justify-between px-5 pb-12 pt-32 md:px-10 md:pb-[70px] lg:px-[42px]">
-        <div className="flex w-full flex-col gap-14 lg:flex-row lg:items-end lg:justify-between">
+      <div className="relative z-[2] flex min-h-[600px] lg:min-h-[700px] w-full items-end justify-between px-5 pb-12 pt-32 md:px-10 md:pb-[70px] lg:px-[42px]">
+        <div className="flex w-full flex-col gap-10 lg:gap-14 lg:flex-row lg:items-end lg:justify-between">
           {/* LEFT CONTENT */}
           <div className="flex flex-col gap-7">
             {/* Heading */}
             <h1
               className="
-                text-[36px]
+                text-[48px]
                 font-normal
-                leading-[42px]
+                leading-[54px]
                 text-[#FDFCFC]
                 md:text-[48px]
                 md:leading-[54px]
@@ -42,16 +42,16 @@ export default function EventsHeroSection() {
             </h1>
 
             {/* Meta Row */}
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10 lg:gap-[72px]">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10 lg:gap-[72px]">
               {/* Meta Item */}
               <div className="flex flex-col gap-2">
                 <span
-                  className="uppercase text-[#FDFCFC]"
+                  className="uppercase text-[#FDFCFC] tracking-wider"
                   style={{
                     fontFamily: "Lora, serif",
-                    fontSize: "15.59px",
+                    fontSize: "14px",
                     fontWeight: 400,
-                    lineHeight: "100%",
+                    lineHeight: "140%",
                   }}
                 >
                   LOS ANGELES, CALIFORNIA
@@ -61,27 +61,27 @@ export default function EventsHeroSection() {
               {/* Meta Item */}
               <div className="flex flex-col gap-2">
                 <span
-                  className="uppercase text-[#FDFCFC]"
+                  className="uppercase text-[#FDFCFC] tracking-wider"
                   style={{
                     fontFamily: "Lora, serif",
-                    fontSize: "15.59px",
+                    fontSize: "14px",
                     fontWeight: 400,
-                    lineHeight: "100%",
+                    lineHeight: "140%",
                   }}
                 >
-                  MAY12, 2026 EMERALD EVENT ARENA
+                  MAY 12, 2026 EMERALD EVENT ARENA
                 </span>
               </div>
 
               {/* Meta Item */}
               <div className="flex flex-col gap-2">
                 <span
-                  className="uppercase text-[#FDFCFC]"
+                  className="uppercase text-[#FDFCFC] tracking-wider"
                   style={{
                     fontFamily: "Lora, serif",
-                    fontSize: "15.59px",
+                    fontSize: "14px",
                     fontWeight: 400,
-                    lineHeight: "100%",
+                    lineHeight: "140%",
                   }}
                 >
                   GENERAL TICKET: $249
@@ -103,9 +103,9 @@ export default function EventsHeroSection() {
               "
               style={{
                 fontFamily: "Lora, serif",
-                fontSize: "15.59px",
+                fontSize: "16px",
                 fontWeight: 400,
-                lineHeight: "100%",
+                lineHeight: "160%",
               }}
             >
               India's premier institute for Hotel Management & Culinary Arts.
@@ -132,7 +132,7 @@ export default function EventsHeroSection() {
               "
             >
               {/* Left Icon Area */}
-              <div className="flex h-[71px] w-[82px] items-center justify-center bg-white">
+              <div className="flex h-[71px] w-[82px] items-center justify-center bg-white shrink-0">
                 <Ticket
                   size={30}
                   strokeWidth={1.8}
@@ -143,12 +143,12 @@ export default function EventsHeroSection() {
               {/* Button Text */}
               <div className="flex flex-1 items-center justify-center px-5">
                 <span
-                  className="w-[174px] text-right text-white"
+                  className="text-center md:text-right text-white"
                   style={{
                     fontFamily: "Lora, serif",
                     fontSize: "16px",
                     fontWeight: 400,
-                    lineHeight: "100%",
+                    lineHeight: "120%",
                   }}
                 >
                   Get your ticket now for 50% off

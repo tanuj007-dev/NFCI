@@ -119,15 +119,19 @@ export default function RecentEventsSection() {
               absolute
               left-1/2
               -translate-x-1/2
-              bottom-[188px]
+              bottom-[140px]
+              md:bottom-[188px]
               z-20
               w-[92%]
               xl:w-[1252px]
               bg-[#FFF7ED]
               rounded-[10px]
-              px-8
-              pt-8
-              pb-[145px]
+              px-6
+              md:px-8
+              pt-6
+              md:pt-8
+              pb-[100px]
+              md:pb-[145px]
               xl:pb-[155px]
               flex
               flex-col

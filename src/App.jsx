@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import EventPage from './pages/EventPage';
-import BlogPage from './pages/BlogPage';
-import BlogDetailPage from './pages/BlogDetailPage';
 import Footer from './components/Footer';
-import EventDetailPage from './pages/EventDetailPage';
+
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const EventPage = lazy(() => import('./pages/EventPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
+const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh] w-full">
+    <div className="w-10 h-10 border-4 border-[#9B251E] border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 
 
@@ -15,16 +24,16 @@ function App() {
     <Router>
       <div className="relative overflow-x-hidden min-h-screen flex flex-col">
         <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/events" element={<EventPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blogdetails" element={<BlogDetailPage />} />
-            <Route path="/eventdetails" element={<EventDetailPage />} />
-          
-          
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/events" element={<EventPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blogdetails" element={<BlogDetailPage />} />
+              <Route path="/eventdetails" element={<EventDetailPage />} />
+            </Routes>
+          </Suspense>
         </div>
         <Footer />
       </div>

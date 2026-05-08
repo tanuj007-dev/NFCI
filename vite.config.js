@@ -10,6 +10,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
+            if (id.includes('react')) return 'react-core';
+            if (id.includes('swiper')) return 'swiper-vendor';
+            if (id.includes('framer-motion')) return 'motion-vendor';
+            if (id.includes('lucide')) return 'icons-vendor';
             return 'vendor';
           }
         },

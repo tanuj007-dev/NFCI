@@ -33,14 +33,14 @@ const EventPageTeam = () => {
   const NavButton = ({ direction, onClick }) => (
     <button 
       onClick={onClick}
-      className={`absolute top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#A3231D] text-white flex items-center justify-center hover:bg-[#8B1E19] transition-all duration-300 shadow-lg cursor-pointer ${
+      className={`absolute top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#A3231D] text-white flex items-center justify-center hover:bg-[#8B1E19] transition-all duration-300 shadow-lg cursor-pointer ${
         direction === 'left'
-          ? '-left-6 md:-left-8'
-          : '-right-6 md:-right-8'
+          ? '-left-4 md:-left-8'
+          : '-right-4 md:-right-8'
       }`}
     >
       <svg
-        className="w-5 h-5 md:w-6 md:h-6"
+        className="w-4 h-4 md:w-6 md:h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -65,16 +65,16 @@ const EventPageTeam = () => {
   );
 
   return (
-    <section className="bg-[#FFF7ED] py-20 lg:py-20 overflow-hidden">
-      <div className="container mx-auto px-10 md:px-20 lg:px-20">
+    <section className="bg-[#FFF7ED] py-16 md:py-20 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-20">
 
         {/* Team of Experts */}
         <div>
-          <h2 className="font-new-york text-4xl md:text-5xl text-[#1a1a1a] text-center mb-16">
+          <h2 className="font-new-york text-4xl md:text-5xl text-[#1a1a1a] text-center mb-10 md:mb-16">
             Team of Experts
           </h2>
 
-          <div className="relative mt-20">
+          <div className="relative mt-10 md:mt-20">
             <NavButton
               direction="left"
               onClick={() => teamSwiperRef.current?.slidePrev()}
@@ -90,7 +90,7 @@ const EventPageTeam = () => {
               onBeforeInit={(swiper) => {
                 teamSwiperRef.current = swiper;
               }}
-              spaceBetween={10}
+              spaceBetween={20}
               slidesPerView={2}
               loop={true}
               autoplay={{
@@ -98,16 +98,17 @@ const EventPageTeam = () => {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                640: { slidesPerView: 3 },
-                1024: { slidesPerView: 7 },
-                1440: { slidesPerView: 7 },
+                480: { slidesPerView: 3, spaceBetween: 20 },
+                768: { slidesPerView: 4, spaceBetween: 25 },
+                1024: { slidesPerView: 5, spaceBetween: 30 },
+                1280: { slidesPerView: 7, spaceBetween: 30 },
               }}
               className="team-swiper"
             >
               {team.map((member, i) => (
                 <SwiperSlide key={i}>
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-full aspect-[3/4] mb-6 overflow-hidden">
+                    <div className="w-full aspect-[3/4] mb-4 md:mb-6 overflow-hidden rounded-lg">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -115,7 +116,7 @@ const EventPageTeam = () => {
                       />
                     </div>
 
-                    <h3 className="font-lora text-nfci-red font-bold text-sm md:text-base mb-1">
+                    <h3 className="font-lora text-[#9B251E] font-bold text-sm md:text-base mb-1">
                       {member.name}
                     </h3>
 

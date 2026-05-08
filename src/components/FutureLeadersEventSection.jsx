@@ -89,10 +89,11 @@ export default function FutureLeadersEventSection() {
         <div
           className="
             relative
-            h-[420px]
-            overflow-hidden
-            sm:h-[520px]
+            h-[300px]
+            sm:h-[400px]
+            md:h-[520px]
             lg:h-[851px]
+            overflow-hidden
           "
         >
           <img

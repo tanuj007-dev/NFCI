@@ -81,7 +81,7 @@ export default function FeaturedMusicFestivalSection() {
           {/* Event Details */}
           <div
             className="
-              mt-3 flex w-full flex-col gap-8
+              mt-3 flex w-full flex-col gap-6
               sm:flex-row sm:flex-wrap
               xl:flex-nowrap xl:gap-[148px]
             "
@@ -89,13 +89,13 @@ export default function FeaturedMusicFestivalSection() {
             {eventDetails.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-2 whitespace-nowrap"
+                className="flex flex-col gap-2 min-w-[140px]"
               >
-                <p className="font-lora text-[20px] leading-[100%] text-[#151515]">
+                <p className="font-lora text-[16px] md:text-[20px] leading-[140%] md:leading-[100%] text-[#151515] opacity-70">
                   {item.label}
                 </p>
 
-                <p className="font-lora text-[20px] leading-[100%] text-[#151515]">
+                <p className="font-lora text-[18px] md:text-[20px] leading-[140%] md:leading-[100%] text-[#151515] font-medium">
                   {item.value}
                 </p>
               </div>
