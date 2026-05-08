@@ -7,6 +7,8 @@ import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import Footer from './components/Footer';
 import EventDetailPage from './pages/EventDetailPage';
+import CoursePage from './pages/CoursesPage';
+import CourseDetails from './pages/CoursesDetail';
 
 
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blogdetails" element={<BlogDetailPage />} />
             <Route path="/eventdetails" element={<EventDetailPage />} />
+            <Route path="/courses" element={<CoursePage />} />
+            <Route path="/coursesdetails" element={<CourseDetails />} />
           
           
           </Routes>

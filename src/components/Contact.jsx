@@ -189,7 +189,7 @@ const Contact = ({ bgColor = "bg-white" }) => {
           ></iframe>
           
           {/* Map Overlay Card */}
-          <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-12 md:right-auto md:w-auto bg-white rounded-[20px] p-5 md:p-6 shadow-2xl border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[930px] bg-white rounded-[28px] px-8 py-6 shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-[#E8E8E8] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 w-full md:w-auto">
               <div className="space-y-1.5">
                 <h4 className="font-new-york text-gray-900 text-xl font-bold">NFCI Hospitality</h4>

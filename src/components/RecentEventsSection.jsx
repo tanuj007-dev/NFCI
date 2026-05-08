@@ -45,10 +45,10 @@ export default function RecentEventsSection() {
   const [activeEvent, setActiveEvent] = useState(events[0]);
 
   return (
-    <section className="w-full bg-[#F5EFE8] py-[100px] overflow-hidden">
-      <div className="max-w-[1334px] mx-auto px-4 xl:px-0 flex flex-col gap-12">
+    <section className="w-full bg-[#F5EFE8] py-[45px] overflow-hidden">
+      <div className="max-w-[1334px] mx-auto px-4 xl:px-0 flex flex-col gap-6">
         {/* TOP CONTENT */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-3">
           {/* LABEL */}
           <div className="flex flex-col gap-[5px]">
             <div className="w-[98px] h-[1px] bg-[#9B251E]/50" />
@@ -64,9 +64,9 @@ export default function RecentEventsSection() {
           <h2
             className="
               text-[#151515]
-              text-[40px]
-              md:text-[58px]
-              xl:text-[58px]
+              text-[36px]
+              md:text-[50px]
+              xl:text-[54px]
               leading-[100%]
               font-normal
             "
@@ -78,7 +78,7 @@ export default function RecentEventsSection() {
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="font-[Lora] text-[18px] leading-[26px] text-[#151515]">
+          <p className="font-[Lora] text-[17px] leading-[26px] text-[#151515]">
             Our recent event brought together creative minds to share ideas.
           </p>
         </div>
@@ -88,9 +88,9 @@ export default function RecentEventsSection() {
           className="
             relative
             w-full
-            h-[550px]
-            md:h-[720px]
-            xl:h-[848px]
+            h-[400px]
+            md:h-[520px]
+            xl:h-[620px]
             rounded-[10px]
             overflow-hidden
           "
@@ -106,7 +106,8 @@ export default function RecentEventsSection() {
               h-full
               object-cover
               transition-all
-              duration-700
+              duration-1000
+              ease-in-out
             "
           />
 
@@ -119,27 +120,30 @@ export default function RecentEventsSection() {
               absolute
               left-1/2
               -translate-x-1/2
-              bottom-[188px]
+              bottom-[120px]
               z-20
               w-[92%]
               xl:w-[1252px]
               bg-[#FFF7ED]
               rounded-[10px]
-              px-8
-              pt-8
-              pb-[145px]
-              xl:pb-[155px]
+              px-6
+              pt-6
+              pb-[90px]
+              xl:pb-[100px]
               flex
               flex-col
               gap-3
+              transition-all
+              duration-700
+              ease-in-out
             "
           >
             {/* TITLE */}
             <h3
               className="
                 text-[#151515]
-                text-[26px]
-                xl:text-[28px]
+                text-[24px]
+                xl:text-[26px]
                 leading-[115%]
                 font-semibold
               "
@@ -151,12 +155,12 @@ export default function RecentEventsSection() {
             </h3>
 
             {/* DATE */}
-            <p className="font-[Lora] text-[18px] leading-[100%] text-[#707070] font-medium">
+            <p className="font-[Lora] text-[17px] leading-[100%] text-[#707070] font-medium">
               {activeEvent.date}
             </p>
 
             {/* DESCRIPTION */}
-            <p className="font-[Lora] text-[18px] leading-[150%] text-black max-w-[900px]">
+            <p className="font-[Lora] text-[17px] leading-[150%] text-black max-w-[900px]">
               {activeEvent.description}
             </p>
           </div>
@@ -167,15 +171,15 @@ export default function RecentEventsSection() {
               absolute
               left-1/2
               -translate-x-1/2
-              bottom-[26px]
+              bottom-[18px]
               z-30
               w-[92%]
               xl:w-[1252px]
-              overflow-x-auto
+              overflow-hidden
               scrollbar-hide
             "
           >
-            <div className="flex min-w-max xl:min-w-full">
+            <div className="flex w-full gap-2">
               {events.map((event) => {
                 const isActive = activeEvent.id === event.id;
 
@@ -186,21 +190,22 @@ export default function RecentEventsSection() {
                     onClick={() => setActiveEvent(event)}
                     className={`
                       relative
-                      w-[220px]
-                      md:w-[260px]
-                      xl:w-[313px]
-                      h-[150px]
-                      md:h-[180px]
-                      xl:h-[213px]
+                      w-[200px]
+                      md:w-[240px]
+                      xl:w-[300px]
+                      h-[100px]
+                      md:h-[125px]
+                      xl:h-[150px]
                       overflow-hidden
                       rounded-[10px]
                       border
                       flex-shrink-0
                       transition-all
-                      duration-500
+                      duration-700
+                      ease-in-out
                       ${
                         isActive
-                          ? "border-white shadow-[0_0_25px_rgba(255,255,255,0.35)] z-10"
+                          ? "border-white shadow-[0_0_25px_rgba(255,255,255,0.35)] z-10 scale-[1.02]"
                           : "border-white/80"
                       }
                     `}
@@ -214,7 +219,8 @@ export default function RecentEventsSection() {
                         h-full
                         object-cover
                         transition-transform
-                        duration-700
+                        duration-1000
+                        ease-in-out
                         hover:scale-105
                       "
                     />
@@ -225,7 +231,8 @@ export default function RecentEventsSection() {
                         absolute
                         inset-0
                         transition-all
-                        duration-500
+                        duration-700
+                        ease-in-out
                         ${
                           isActive
                             ? "bg-black/5"
