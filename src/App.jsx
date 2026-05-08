@@ -6,6 +6,7 @@ import EventPage from './pages/EventPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import Footer from './components/Footer';
+import EventDetailPage from './pages/EventDetailPage';
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/events" element={<EventPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blogdetails" element={<BlogDetailPage />} />
+            <Route path="/eventdetails" element={<EventDetailPage />} />
           
           
           </Routes>
