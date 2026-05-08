@@ -110,7 +110,7 @@ export default function PartnersLogoGridSection() {
             text-center
             uppercase
             text-black
-            font-bold
+            font-normal
             leading-[160%]
             tracking-[0]
             text-[20px]

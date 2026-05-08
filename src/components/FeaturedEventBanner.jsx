@@ -4,11 +4,11 @@ import featuredEventImage from "../assets/featured-event.png";
 
 export default function FeaturedEventBanner() {
   return (
-    <section className="w-full bg-[#FFF7ED] py-[100px] px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#FFF7ED] py-[50px] px-4 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-[1334px] flex-col gap-[34px]">
         {/* Featured Image Banner */}
         <div className="group flex flex-col">
-          <div className="relative h-[320px] w-full cursor-pointer overflow-hidden rounded-[10px] md:h-[520px] xl:h-[660px]">
+          <div className="relative h-[240px] w-full cursor-pointer overflow-hidden rounded-[10px] md:h-[400px] xl:h-[500px]">
             {/* Background Image */}
             <img
               src={featuredEventImage}

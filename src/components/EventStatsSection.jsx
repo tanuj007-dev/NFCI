@@ -5,17 +5,20 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    title: "60+ Expert Speakers",
+    number: "60+",
+    title: "Expert Speakers",
     description:
       "Industry leaders from top global brands shared insights.",
   },
   {
-    title: "95% Satisfaction Rate",
+    number: "95%",
+    title: "Satisfaction Rate",
     description:
       "Professionals from around the world joined last year’s event.",
   },
   {
-    title: "5,000+ Attendees",
+    number: "5,000+",
+    title: "Attendees",
     description:
       "Professionals from around the world joined last year’s event.",
   },
@@ -44,6 +47,23 @@ export default function EventStatsSection() {
                 font-normal
                 leading-[110%]
                 tracking-normal
+                text-[42px]
+                md:text-[52px]
+                lg:text-[64px]
+              "
+              style={{
+                fontFamily: "NewYork, serif",
+              }}
+            >
+              {item.number}
+            </h2>
+
+            <h3
+              className="
+                text-white
+                font-normal
+                leading-none
+                tracking-normal
                 text-[28px]
                 md:text-[36px]
                 lg:text-[44px]
@@ -53,7 +73,7 @@ export default function EventStatsSection() {
               }}
             >
               {item.title}
-            </h2>
+            </h3>
 
             <p
               className="

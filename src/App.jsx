@@ -9,6 +9,8 @@ const EventPage = lazy(() => import('./pages/EventPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
 const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
+const CoursePage = lazy(() => import('./pages/CoursesPage'));
+const CourseDetails = lazy(() => import('./pages/CoursesDetail'));
 
 // Loading component
 const PageLoader = () => (
@@ -16,8 +18,6 @@ const PageLoader = () => (
     <div className="w-10 h-10 border-4 border-[#9B251E] border-t-transparent rounded-full animate-spin" />
   </div>
 );
-
-
 
 function App() {
   return (
@@ -32,6 +32,8 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blogdetails" element={<BlogDetailPage />} />
               <Route path="/eventdetails" element={<EventDetailPage />} />
+              <Route path="/courses" element={<CoursePage />} />
+              <Route path="/coursesdetails" element={<CourseDetails />} />
             </Routes>
           </Suspense>
         </div>
