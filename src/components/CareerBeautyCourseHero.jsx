@@ -1,6 +1,7 @@
 // File: CareerBeautyCourseHero.jsx
 
 import React from "react";
+import beautyHeroImage from "../assets/couresheroimage.jpg";
 
 export default function CareerBeautyCourseHero() {
   return (
@@ -108,7 +109,7 @@ export default function CareerBeautyCourseHero() {
           "
         >
           <img
-            src="src/assets/couresheroimage.jpg"
+            src={beautyHeroImage}
             alt="Beauty Hero"
             className="
               h-full w-full
@@ -121,7 +122,7 @@ export default function CareerBeautyCourseHero() {
         {/* MOBILE IMAGE */}
         <div className="relative block h-[300px] w-full overflow-hidden lg:hidden">
           <img
-            src="src/assets/couresheroimage.jpg"
+            src={beautyHeroImage}
             alt="Beauty Hero"
             className="h-full w-full object-cover object-top"
           />
