@@ -4,6 +4,7 @@ import CertificateTandoorSection from "../components/CertificateTandoorSection";
 import IndianTandooriGallerySection from "../components/IndianTandooriGallerySection";
 import IndianCuisineCourseDetails from "../components/IndianCuisineCourseDetails";
 import IndianCookingCourseEligibility from "../components/IndianCookingCourseEligibility";
+import WhatWillYouLearnSection from "../components/WhatWillYouLearnSection";
 import Contact from "../components/Contact";
 
 
@@ -17,6 +18,7 @@ const CourseDetails = () => {
       <IndianTandooriGallerySection />
       <IndianCuisineCourseDetails />
       <IndianCookingCourseEligibility />
+      <WhatWillYouLearnSection />
       <Contact />
         
 

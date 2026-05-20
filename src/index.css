@@ -58,3 +58,25 @@ p {
 button {
   cursor: pointer;
 }
+
+/* Admin CMS preview: always lay out at desktop width */
+.admin-desktop-preview {
+  width: 1440px;
+  min-width: 1440px;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+/* Embed preview: desktop width inside iframe only, no spillover scroll */
+html[data-embed-preview='true'],
+html[data-embed-preview='true'] body {
+  width: 1440px;
+  min-width: 1440px;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+/* Admin shell — prevent page-level horizontal scroll */
+html:has([data-admin-shell]) {
+  overflow-x: hidden;
+}

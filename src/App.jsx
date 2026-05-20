@@ -1,46 +1,24 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
+import AdminRoutes from './admin/AdminRoutes'
+import PublicRoutes from './PublicRoutes'
 
-// Lazy load pages
-const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const EventPage = lazy(() => import('./pages/EventPage'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
-const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
-const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
-const CoursePage = lazy(() => import('./pages/CoursesPage'));
-const CourseDetails = lazy(() => import('./pages/CoursesDetail'));
+function AppContent() {
+  const location = useLocation()
+  const isAdmin = location.pathname.startsWith('/admin')
 
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-[60vh] w-full">
-    <div className="w-10 h-10 border-4 border-[#9B251E] border-t-transparent rounded-full animate-spin" />
-  </div>
-);
+  if (isAdmin) {
+    return <AdminRoutes />
+  }
+
+  return <PublicRoutes />
+}
 
 function App() {
   return (
     <Router>
-      <div className="relative overflow-x-hidden min-h-screen flex flex-col">
-        <div className="flex-grow">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/events" element={<EventPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blogdetails" element={<BlogDetailPage />} />
-              <Route path="/eventdetails" element={<EventDetailPage />} />
-              <Route path="/courses" element={<CoursePage />} />
-              <Route path="/coursesdetails" element={<CourseDetails />} />
-            </Routes>
-          </Suspense>
-        </div>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

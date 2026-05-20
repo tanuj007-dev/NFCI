@@ -1,38 +1,42 @@
-import React from 'react';
-import b1 from '../assets/b1.png';
-import b2 from '../assets/b2.png';
-import b3 from '../assets/b3.png';
-import b4 from '../assets/b4.png';
+import React from 'react'
+import b1 from '../assets/b1.png'
+import b2 from '../assets/b2.png'
+import b3 from '../assets/b3.png'
+import b4 from '../assets/b4.png'
 
-const TopEmployers = () => {
-  const logos = [b1, b2, b3, b4];
+const defaultLogos = [b1, b2, b3, b4]
+
+const TopEmployers = ({
+  title = 'Some Esteemed Top Employers that Hire NFCI Students',
+  description = 'Top employers look to the NFCI when hiring, and when you grab your NFCI certification, they wish to take you on board. Backed with 36 years of experience, our hotel management institute is a full-service culinary institute.',
+  logos,
+}) => {
+  const logoList =
+    Array.isArray(logos) && logos.length > 0 ? logos.filter(Boolean) : defaultLogos
 
   return (
-    <section className="bg-[#FAF6F1] py-16 lg:py-20 overflow-hidden">
+    <section className="overflow-hidden bg-[#FAF6F1] py-16 lg:py-20">
       <div className="container mx-auto px-6 md:px-10 lg:px-[100px]">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          
-          {/* Left Side - Content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="font-new-york text-3xl md:text-4xl lg:text-[32px] text-[#333333] leading-tight mb-6">
-              Some Esteemed Top Employers that Hire NFCI Students
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
+          <div className="w-full text-center lg:w-1/2 lg:text-left">
+            <h2 className="font-new-york mb-6 text-3xl leading-tight text-[#333333] md:text-4xl lg:text-[32px]">
+              {title}
             </h2>
-            <p className="font-lora mt-3 text-[#333333]/70 text-base md:text-[16px] leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Top employers look to the NFCI when hiring, and when you grab your NFCI certification, they wish to take you on board. Backed with 36 years of experience, our hotel management institute is a full-service culinary...
+            <p className="font-lora mx-auto mt-3 max-w-xl text-base leading-relaxed text-[#333333]/70 md:text-[16px] lg:mx-0">
+              {description}
             </p>
           </div>
 
-          {/* Right Side - Logos (2x2 Grid on Mobile, Row on Desktop) */}
-          <div className="w-full lg:w-1/2 grid grid-cols-2 md:flex md:flex-row md:flex-nowrap items-center justify-items-center lg:justify-end gap-6 md:gap-10 py-4">
-            {logos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="flex-shrink-0 w-full max-w-[120px] md:max-w-[150px] lg:w-[120px] h-auto flex items-center justify-center transition-all duration-300 transform hover:scale-110 bg-white p-4 rounded-lg shadow-sm lg:shadow-none lg:bg-transparent"
+          <div className="grid w-full grid-cols-2 items-center justify-items-center gap-6 py-4 md:flex md:flex-row md:flex-nowrap md:justify-end md:gap-10 lg:w-1/2">
+            {logoList.map((logo, index) => (
+              <div
+                key={index}
+                className="flex h-auto w-full max-w-[120px] flex-shrink-0 items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-all duration-300 hover:scale-110 md:max-w-[150px] lg:w-[120px] lg:bg-transparent lg:shadow-none"
               >
-                <img 
-                  src={logo} 
-                  alt={`Employer ${index + 1}`} 
-                  className="max-w-full h-auto object-contain transition-all duration-500"
+                <img
+                  src={logo}
+                  alt={`Employer ${index + 1}`}
+                  className="h-auto max-w-full object-contain transition-all duration-500"
                 />
               </div>
             ))}
@@ -40,7 +44,7 @@ const TopEmployers = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TopEmployers;
+export default TopEmployers

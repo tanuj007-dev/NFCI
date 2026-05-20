@@ -1,0 +1,71 @@
+{
+  "id": "placement",
+  "slug": "/placements",
+  "title": "Placements",
+  "description": "CMS-driven placements page — employers, stats, and student success",
+  "blocks": [
+    {
+      "instanceId": "placement-navbar",
+      "componentId": "about-navbar",
+      "order": 1,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-hero",
+      "componentId": "placement-hero",
+      "order": 2,
+      "props": {
+        "title": "Placements at NFCI",
+        "subtitle": "100% placement assistance with esteemed hospitality establishments across India and abroad. Launch your culinary career with NFCI."
+      }
+    },
+    {
+      "instanceId": "placement-stats",
+      "componentId": "stats",
+      "order": 3,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-top-employers",
+      "componentId": "top-employers",
+      "order": 4,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-expertise",
+      "componentId": "expertise",
+      "order": 5,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-why-choose-us",
+      "componentId": "why-choose-us",
+      "order": 6,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-training-partners",
+      "componentId": "training-partners",
+      "order": 7,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-testimonials",
+      "componentId": "testimonials",
+      "order": 8,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-faq",
+      "componentId": "faq",
+      "order": 9,
+      "props": {}
+    },
+    {
+      "instanceId": "placement-contact",
+      "componentId": "contact",
+      "order": 10,
+      "props": {}
+    }
+  ]
+}

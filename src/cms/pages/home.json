@@ -1,0 +1,101 @@
+{
+  "id": "home",
+  "slug": "/",
+  "title": "Home",
+  "description": "Sample CMS page — matches current HomePage.jsx section order",
+  "pageLayout": {
+    "navbarWrapper": "absolute-top"
+  },
+  "blocks": [
+    {
+      "instanceId": "home-navbar",
+      "componentId": "navbar",
+      "order": 1,
+      "props": {}
+    },
+    {
+      "instanceId": "home-hero",
+      "componentId": "hero",
+      "order": 2,
+      "props": {}
+    },
+    {
+      "instanceId": "home-stats",
+      "componentId": "stats",
+      "order": 3,
+      "props": {}
+    },
+    {
+      "instanceId": "home-about",
+      "componentId": "about",
+      "order": 4,
+      "props": {}
+    },
+    {
+      "instanceId": "home-our-company",
+      "componentId": "our-company",
+      "order": 5,
+      "props": {}
+    },
+    {
+      "instanceId": "home-why-choose-us",
+      "componentId": "why-choose-us",
+      "order": 6,
+      "props": {}
+    },
+    {
+      "instanceId": "home-programs-slider",
+      "componentId": "programs-slider",
+      "order": 7,
+      "props": {}
+    },
+    {
+      "instanceId": "home-affiliations",
+      "componentId": "affiliations",
+      "order": 8,
+      "props": {}
+    },
+    {
+      "instanceId": "home-expertise",
+      "componentId": "expertise",
+      "order": 9,
+      "props": {}
+    },
+    {
+      "instanceId": "home-top-employers",
+      "componentId": "top-employers",
+      "order": 10,
+      "props": {}
+    },
+    {
+      "instanceId": "home-video-section",
+      "componentId": "video-section",
+      "order": 11,
+      "props": {}
+    },
+    {
+      "instanceId": "home-testimonials",
+      "componentId": "testimonials",
+      "order": 12,
+      "props": {}
+    },
+    {
+      "instanceId": "home-articles",
+      "componentId": "articles",
+      "order": 13,
+      "props": {}
+    },
+    {
+      "instanceId": "home-faq",
+      "componentId": "faq",
+      "order": 14,
+      "props": {}
+    },
+    {
+      "instanceId": "home-contact",
+      "componentId": "contact",
+      "order": 15,
+      "props": {}
+    }
+  ]
+}

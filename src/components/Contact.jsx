@@ -4,7 +4,11 @@ import 'react-phone-input-2/lib/style.css';
 
 const PhoneInput = PhoneInputPkg.default || PhoneInputPkg;
 
-const Contact = ({ bgColor = "bg-white" }) => {
+const Contact = ({
+  bgColor = 'bg-white',
+  title = 'Contact Us',
+  subtitle = '',
+}) => {
   const [phone, setPhone] = useState('');
 
   return (
@@ -17,9 +21,12 @@ const Contact = ({ bgColor = "bg-white" }) => {
           {/* Left Side: Contact Form Card */}
           <div className="lg:w-[45%]">
             <div className="bg-white rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-6 md:p-10 border border-gray-100">
-              <h3 className="font-new-york text-3xl md:text-[40px] text-[#333333] mb-10">
-                Contact Us
+              <h3 className="font-new-york text-3xl md:text-[40px] text-[#333333] mb-4">
+                {title}
               </h3>
+              {subtitle && (
+                <p className="font-lora text-[#333]/70 text-base mb-6">{subtitle}</p>
+              )}
               
               <form className="space-y-6 mt-5">
                 {/* Full Name */}

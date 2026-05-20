@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
-const FAQ = () => {
+const FAQ = ({
+  title = "What's On Your Mind",
+  subtitle = "We've answered the questions you didn't know you had.",
+}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
@@ -49,10 +52,10 @@ const FAQ = () => {
             </p>
           </div>
           <h2 className="font-new-york text-4xl md:text-5xl lg:text-[56.84px] text-white mb-6">
-            What's On Your Mind
+            {title}
           </h2>
           <p className="font-lora mt-3 text-white text-lg md:text-[18px]">
-            We've answered the questions you didn't know you had.
+            {subtitle}
           </p>
         </div>
 

@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import BlogHeroBanner from "../components/BlogHeroBanner";
 import BlogDetail from "../components/BlogDetailscontent";
 import RelatedPosts from "../components/RelatedPosts";
-import WhatWillYouLearn from "../components/WhatWillYouLearn";
 import Contact from "../components/Contact";
 
 
@@ -21,7 +20,6 @@ const BlogDetailPage = () => {
         <BlogHeroBanner />
         <BlogDetail />
         <RelatedPosts />
-        <WhatWillYouLearn />
         <Contact />
         
 
